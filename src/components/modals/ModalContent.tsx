@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+
 import { ModalContentProps } from '../utils/types';
 
 export const SettingsModalContent: React.FC<ModalContentProps> = ({ onClose }) => (
@@ -20,6 +20,12 @@ export const AchievementsModalContent: React.FC<ModalContentProps> = ({ onClose 
     <ul className="space-y-2">
       <li>✅ Первый вход в систему</li>
       <li>🏆 10 выполненных задач</li>
+      <button 
+      onClick={onClose}
+      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+    >
+      Сохранить
+    </button>
     </ul>
   </div>
 );
@@ -30,6 +36,12 @@ export const InfoModalContent: React.FC<ModalContentProps> = ({ onClose }) => (
     <div className="prose">
       <p>Версия: 1.0.0</p>
       <p>Дата сборки: {new Date().toLocaleDateString()}</p>
+      <button 
+      onClick={onClose}
+      className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition"
+    >
+      Сохранить
+    </button>
     </div>
   </div>
 );

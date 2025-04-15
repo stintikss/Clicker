@@ -20,8 +20,8 @@ const Main: React.FC = () => {
     { id: 1, setclick: 1, sell: 10 },
   ];
 
-  const upgrade = (setclick: number, sell: number) => {
-    const newData = buyUpgrade(setclick, sell);
+  const upgrade = (setclick: number) => {
+    const newData = buyUpgrade(setclick);
     if (newData) {
       setGameData(newData);
     }
@@ -40,7 +40,7 @@ const Main: React.FC = () => {
             <p 
               key={item.id} 
               className='cursor-pointer' 
-              onClick={() => upgrade(item.setclick, item.sell)}
+              onClick={() => upgrade(item.setclick)}
             >
               Upgrade (+{item.setclick}) → Current: {gameData.upgradeValue} Price: {gameData.upgradePrice}
             </p>

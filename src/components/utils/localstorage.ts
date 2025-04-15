@@ -24,7 +24,7 @@ export const incrementClick = () => {
   saveGameData({ clicks: newClicks });
 };
 
-export const buyUpgrade = (setclick: number, sell: number) => {
+export const buyUpgrade = (setclick: number) => {
   const gameData = getGameData();
   
   if (gameData.clicks >= gameData.upgradePrice) {
