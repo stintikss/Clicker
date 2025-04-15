@@ -1,4 +1,3 @@
-import { style } from 'framer-motion/client';
 import React from 'react'
 import { motion } from 'framer-motion';
 import { ELEMENTS_MODAL_ANIMATION } from '../utils/FrameMotion';
